@@ -11,7 +11,7 @@ return {
       table.insert(
         opts.adapters,
         require("neotest-jest")({
-          jestCommand = "yarn test --",
+          jestCommand = "yarn test --forceExit",
           jestConfigFile = "jest.config.js",
           cwd = function()
             return vim.fn.getcwd()
