@@ -1,4 +1,13 @@
 return {
   { "catppuccin/nvim", name = "catppuccin", opts = { flavour = "macchiato" } },
-  { "LazyVim/LazyVim", opts = { colorscheme = "catppuccin" } },
+  { "ellisonleao/gruvbox.nvim" },
+  {
+    "craftzdog/solarized-osaka.nvim",
+  },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "gruvbox",
+    },
+  },
 }
