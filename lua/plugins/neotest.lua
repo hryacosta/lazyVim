@@ -12,7 +12,7 @@ return {
       table.insert(
         opts.adapters,
         require("neotest-jest")({
-          jestCommand = "yarn test --forceExit",
+          jestCommand = "npx jest --coverage --forceExit",
           jestConfigFile = "jest.config.js",
           cwd = function()
             return vim.fn.getcwd()
