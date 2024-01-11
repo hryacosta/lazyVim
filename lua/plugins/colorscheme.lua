@@ -1,15 +1,15 @@
 return {
   { "catppuccin/nvim", name = "catppuccin", opts = { flavour = "macchiato" } },
-  {
-    "folke/tokyonight.nvim",
-    opts = {
-      transparent = true,
-      styles = {
-        sidebars = "transparent",
-        floats = "transparent",
-      },
-    },
-  },
+  -- {
+  --   "folke/tokyonight.nvim",
+  --   opts = {
+  --     transparent = true,
+  --     styles = {
+  --       sidebars = "transparent",
+  --       floats = "transparent",
+  --     },
+  --   },
+  -- },
   {
     "ellisonleao/gruvbox.nvim",
   },
@@ -21,7 +21,7 @@ return {
     opts = {
       -- colorscheme = "monokai-pro-spectrum",
       -- colorscheme = "gruvbox",
-      colorscheme = "tokyonight",
+      colorscheme = "tokyonight-night",
     },
   },
 }
