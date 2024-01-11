@@ -1,5 +1,5 @@
 return {
-  { "nvim-neotest/neotest-plenary" },
+  -- { "nvim-neotest/neotest-plenary" },
   {
     "nvim-neotest/neotest",
     dependencies = {
@@ -7,6 +7,16 @@ return {
       "antoinemadec/FixCursorHold.nvim",
       "haydenmeade/neotest-jest",
       "sidlatau/neotest-dart",
+      "marilari88/neotest-vitest",
+    },
+    keys = {
+      {
+        "<leader>tl",
+        function()
+          require("neotest").run.run_last()
+        end,
+        desc = "Run last test",
+      },
     },
     opts = function(_, opts)
       table.insert(
@@ -14,6 +24,7 @@ return {
         require("neotest-jest")({
           jestCommand = "npx jest --coverage --forceExit",
           jestConfigFile = "jest.config.js",
+          env = { CI = true },
           cwd = function()
             return vim.fn.getcwd()
           end,
@@ -30,16 +41,17 @@ return {
           custom_test_method_names = {},
         })
       )
+      table.insert(opts.adapters, require("neotest-vitest"))
     end,
   },
-  {
-    "nvim-neotest/neotest",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "antoinemadec/FixCursorHold.nvim",
-      "haydenmeade/neotest-jest",
-      "sidlatau/neotest-dart",
-    },
-    opts = { adapters = { "neotest-plenary", "neotest-jest", "neotest-dart" } },
-  },
+  -- {
+  --   "nvim-neotest/neotest",
+  --   dependencies = {
+  --     "nvim-lua/plenary.nvim",
+  --     "antoinemadec/FixCursorHold.nvim",
+  --     "haydenmeade/neotest-jest",
+  --     "sidlatau/neotest-dart",
+  --   },
+  --   opts = { adapters = { "neotest-plenary", "neotest-jest", "neotest-dart" } },
+  -- },
 }
