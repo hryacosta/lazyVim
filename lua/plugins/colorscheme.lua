@@ -26,14 +26,14 @@ return {
       }
     end,
   },
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      -- colorscheme = "monokai-pro-spectrum",
-      -- colorscheme = "gruvbox",
-      -- colorscheme = "tokyonight-night",
-      -- colorscheme = "solarized-osaka",
-      colorscheme = "tokyonight",
-    },
-  },
+  -- {
+  --   "LazyVim/LazyVim",
+  --   opts = {
+  --     -- colorscheme = "monokai-pro-spectrum",
+  --     -- colorscheme = "gruvbox",
+  --     -- colorscheme = "tokyonight-night",
+  --     -- colorscheme = "solarized-osaka",
+  --     colorscheme = "tokyonight",
+  --   },
+  -- },
 }
