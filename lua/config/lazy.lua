@@ -20,6 +20,7 @@ require("lazy").setup({
     -- { import = "lazyvim.plugins.extras.formatting.prettier" },
     -- { import = "lazyvim.plugins.extras.coding.copilot" },
     -- import/override with your plugins
+    { "codota/tabnine-nvim", build = "./dl_binaries.sh" },
 
     { import = "plugins" },
   },

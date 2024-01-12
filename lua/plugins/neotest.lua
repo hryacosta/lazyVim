@@ -41,7 +41,7 @@ return {
           custom_test_method_names = {},
         })
       )
-      table.insert(opts.adapters, require("neotest-vitest"))
+      table.insert(opts.adapters, "neotest-vitest")
     end,
   },
   -- {
