@@ -44,14 +44,4 @@ return {
       table.insert(opts.adapters, "neotest-vitest")
     end,
   },
-  -- {
-  --   "nvim-neotest/neotest",
-  --   dependencies = {
-  --     "nvim-lua/plenary.nvim",
-  --     "antoinemadec/FixCursorHold.nvim",
-  --     "haydenmeade/neotest-jest",
-  --     "sidlatau/neotest-dart",
-  --   },
-  --   opts = { adapters = { "neotest-plenary", "neotest-jest", "neotest-dart" } },
-  -- },
 }
