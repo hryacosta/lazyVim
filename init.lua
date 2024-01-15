@@ -6,8 +6,6 @@ require("coverage").setup({
 require("diffview").setup({
   lazy = true,
 })
-require("flutter-tools").setup({})
-
 require("tabnine").setup({
   disable_auto_comment = true,
   accept_keymap = "<C-g>",

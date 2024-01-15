@@ -1,5 +1,5 @@
 return {
-  -- { "nvim-neotest/neotest-plenary" },
+  { "nvim-neotest/neotest-plenary" },
   {
     "nvim-neotest/neotest",
     dependencies = {
@@ -7,16 +7,8 @@ return {
       "antoinemadec/FixCursorHold.nvim",
       "haydenmeade/neotest-jest",
       "sidlatau/neotest-dart",
-      "marilari88/neotest-vitest",
-    },
-    keys = {
-      {
-        "<leader>tl",
-        function()
-          require("neotest").run.run_last()
-        end,
-        desc = "Run last test",
-      },
+      "rcasia/neotest-java",
+      "rouge8/neotest-rust",
     },
     opts = function(_, opts)
       table.insert(
@@ -41,7 +33,19 @@ return {
           custom_test_method_names = {},
         })
       )
-      table.insert(opts.adapters, "neotest-vitest")
+      table.insert(
+        opts.adapters,
+        require("neotest-java")({
+          ignore_wrapper = false,
+        })
+      )
+      table.insert(
+        opts.adapters,
+        require("neotest-rust")({
+          args = { "--no-capture" },
+          dap_adapter = "lldb",
+        })
+      )
     end,
   },
 }

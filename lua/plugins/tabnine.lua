@@ -4,7 +4,7 @@ return {
     build = "./dl_binaries.sh",
     keys = {
       {
-        "<leader>cv",
+        "<leader>c1",
         function()
           require("tabnine.chat").open()
         end,
