@@ -6,6 +6,9 @@ require("coverage").setup({
 require("diffview").setup({
   lazy = true,
 })
+require("gitblame").setup({
+  enabled = true,
+})
 require("tabnine").setup({
   disable_auto_comment = true,
   accept_keymap = "<C-g>",
@@ -15,6 +18,5 @@ require("tabnine").setup({
   exclude_filetypes = { "TelescopePrompt", "NvimTree" },
   log_file_path = nil, -- absolute path to Tabnine log file
 })
-
 require("telescope").load_extension("flutter")
 require("telescope").load_extension("fzf")
